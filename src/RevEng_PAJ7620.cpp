@@ -309,6 +309,19 @@ void RevEng_PAJ7620::setCursorMode()
   writeRegisterArray(setCursorModeRegisterArray, SET_CURSOR_MODE_REG_ARRAY_SIZE);
 }
 
+/**
+ * Puts device into Proximity mode
+ * 
+ * \par
+ * Initializes registers for Proximity mode and enables only the proximity interrupts
+ * 
+ * \param none
+ * \return none
+ */
+void RevEng_PAJ7620::setProximityMode()
+{
+  writeRegisterArray(setProximityModeRegisterArray, SET_PRX_MODE_REG_ARRAY_SIZE);
+}
 
 /**
  * Gets cursor object's current X location
